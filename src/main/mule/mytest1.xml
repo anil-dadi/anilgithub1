@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="48bcc99b-b760-435a-b449-a19769f69880" basePath="root" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="mytest1Flow" doc:id="283cc12b-92c3-42fb-b858-d63257584ffd" >
+		<http:listener doc:name="Listener" doc:id="e2199782-3974-432e-a06b-40b82362676e" config-ref="HTTP_Listener_config" path="test"/>
+		<set-payload value="Sucessfully app is running" doc:name="Set Payload" doc:id="d0f20652-0bbb-44b0-b0ff-012014e54aea" />
+		<logger level="INFO" doc:name="Logger" doc:id="94870487-dbf7-466e-a100-f2e83746bc78" message="first app is running"/>
+	</flow>
+</mule>
