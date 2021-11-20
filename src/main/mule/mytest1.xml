@@ -9,7 +9,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="mytest1Flow" doc:id="283cc12b-92c3-42fb-b858-d63257584ffd" >
 		<http:listener doc:name="Listener" doc:id="e2199782-3974-432e-a06b-40b82362676e" config-ref="HTTP_Listener_config" path="test"/>
-		<set-payload value="Sucessfully app is running" doc:name="Set Payload" doc:id="d0f20652-0bbb-44b0-b0ff-012014e54aea" />
+		<set-payload value="Sucessfully update cicd app is running" doc:name="Set Payload" doc:id="d0f20652-0bbb-44b0-b0ff-012014e54aea" />
 		<logger level="INFO" doc:name="Logger" doc:id="94870487-dbf7-466e-a100-f2e83746bc78" message="first app is running ..iupdate"/>
 	</flow>
 </mule>
