@@ -9,7 +9,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="mytest1Flow" doc:id="cb0c56ed-e015-4a0c-9128-3e0f61ea65e6" >
 		<http:listener doc:name="Listener" doc:id="54bb8834-b68a-46a6-a0dd-fd64baeac00d" config-ref="HTTP_Listener_config" path="test"/>
-		<set-payload value="My test is loaded......." doc:name="Set Payload" doc:id="708b9354-3162-49c9-bb09-6ca5d280ff7c" />
+		<set-payload value="My CI /CD is loaded......." doc:name="Set Payload" doc:id="708b9354-3162-49c9-bb09-6ca5d280ff7c" />
 		<logger level="INFO" doc:name="Logger" doc:id="159c40b5-cfc7-46fc-b975-accfa0a1463a" message="My test is loaded..........."/>
 	</flow>
 </mule>
