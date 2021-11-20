@@ -1,6 +1,9 @@
 # This workflow will build a MuleSoft project and deploy to CloudHub
 name: TestCICD Pipeline -ANIl
 on:
+  push:
+    branches: [master]
+    
   pull_request:
     branches: [master]
 jobs:
@@ -50,4 +53,4 @@ jobs:
         PASSWORD: ${{ secrets.ANYPOINT_PASSWORD }}
       run: |
         artifactName=$(ls *.jar | head -1)
-        mvn package deploy -DmuleDeploy -Danypoint.env=Sandbox -Danypoint.appName=github-cdpipeline-dev -Danypoint.username=${{ secrets.ANYPOINT_USERNAME }} -Danypoint.password=${{ secrets.ANYPOINT_PASSWORD }} -Danypoint.muleVersion=4.3.0 -Danypoint.region=us-west-1 -Danypoint.workers=1
+        mvn package deploy -DmuleDeploy -Danypoint.env=Sandbox -Danypoint.appName=github-cdpipeline-dev -Danypoint.username=${{ secrets.ANYPOINT_USERNAME }} -Danypoint.password=${{ secrets.ANYPOINT_PASSWORD }} -Danypoint.muleVersion=4.4.0 -Danypoint.region=us-west-1 -Danypoint.workers=1
