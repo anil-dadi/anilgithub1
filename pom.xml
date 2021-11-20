@@ -47,13 +47,13 @@
 
 						<uri>https://anypoint.mulesoft.com</uri>
 
-						<muleVersion>${app.runtime}</muleVersion>
+						<muleVersion>4.4.0</muleVersion>
 
 						<username>${username}</username>
 
 						<password>${password}</password>
 
-						<applicationName>${project.name}</applicationName>
+						<applicationName>githubactionCiCd</applicationName>
 
 						<environment>Sandbox</environment>
 
