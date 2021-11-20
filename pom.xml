@@ -49,9 +49,13 @@
 
 						<muleVersion>4.4.0</muleVersion>
 
-						<username>${username}</username>
+						<!-- <username>${username}</username>
 
-						<password>${password}</password>
+						<password>${password}</password> -->
+						
+						<username>anildmule456</username>
+
+						<password>Mule@12345</password> 
 
 						<applicationName>githubactionCiCd</applicationName>
 
